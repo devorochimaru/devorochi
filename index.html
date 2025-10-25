@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OROCHIMARU | Professional Panels & Training</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons (for logos) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- SCRIPT TO BLOCK CTRL+U SHORTCUT (As requested) -->
+  <script>
+    document.addEventListener("keydown", function(e) {
+      // Check if Ctrl key and 'U' key are pressed.
+      if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        // Prevent the default browser action (opening view-source).
+        e.preventDefault();
+        // Show the custom alert message.
+        alert("⚠️ Source code viewing is disabled. Please contact the developer for inquiries. ⚠️");
+      }
+    });
+  </script>
+
+  <!-- Link to Your Custom CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="text-center py-4">
+    <h1>OROCHIMARU 💀</h1>
+  </header>
+
+  <div class="container">
+    <div class="intro text-center mb-5">
+      <h2>Professional Grade Panels & Training</h2>
+      <p>Unlock your potential with our elite tools and expert-led training courses. Join the OROCHIMARU community and elevate your skills to the next level.</p>
+      <p class="fw-bold">NOTE: Custom panel development is temporarily paused due to academic commitments. Ready-made projects are available. Please DM to purchase.</p>
+    </div>
+
+    <!-- ===== AVAILABLE PANELS SECTION ===== -->
+    <section class="text-center mb-5">
+      <h2 class="mb-4">Available Panels & Courses</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Customize panel & project</h5><p class="mt-2 mb-3">Fully custom solutions with top-tier security features like Anti-Debug, Anti-Crack, and Discord RPC.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('internal')">View Details</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Internal Max+</h5><p class="mt-2 mb-3">The ultimate toolkit for maximum performance and control.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('max')">View Prices</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Premium Panel</h5><p class="mt-2 mb-3">Advanced features for a smooth, competitive advantage.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('premium')">View Prices</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Basic Panel</h5><p class="mt-2 mb-3">All the essential features for a basic panel Simple, effective, and reliable.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('basic')">View Prices</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Aim Silent</h5><p class="mt-2 mb-3">our advanced silent aim technology, completely invisible on-screen.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('silent')">View Prices</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Aimkill</h5><p class="mt-2 mb-3">The most aggressive targeting for instant dominations.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('aimkill')">View Prices</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Streamer Panel</h5><p class="mt-2 mb-3">🎯 Undetectable panel - zero latancy & lag you play stream anywhere.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('streamer')">View Prices</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Training Course</h5><p class="mt-2 mb-3">Master C++, C#, and reverse engineering with expert-led courses.</p><button class="btn btn-red mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('crack')">View Prices</button></div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card p-3 h-100"><h5>Contact Dev</h5><p class="mt-2 mb-3">Expert in C, C++, C#, HTML, CSS & Reverse Engineering.</p><button class="btn btn-danger mt-auto" data-bs-toggle="modal" data-bs-target="#priceModal" onclick="updateModal('contact')">Show Info</button></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="text-center mb-5">
+      <h2 class="mb-4">What Our Clients Say</h2>
+      <div class="row g-4">
+          <div class="col-md-6">
+              <div class="card p-4">
+                  <p class="fst-italic">"The Internal Max+ panel is insane. The performance is top tier and the support from Orochimaru is fantastic developer. Highly recommended..."</p>
+                  <h5 class="mt-2">Ayush_72</h5>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <div class="card p-4">
+                  <p class="fst-italic">"As a streamer, the Streamer Panel was a game changer. It's completely undetectable and runs perfectly on my PC without any lag. 10/10."</p>
+                  <h5 class="mt-2">Warrior_yt11</h5>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="mb-5">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                        Are these panels safe to use?
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely. Safety is our number one priority, and every product in our lineup is developed to be secure and reliable. Each panel undergoes rigorous testing to ensure it remains undetectable, providing robust protection for you and your accounts. We integrate advanced security measures like Anti-Debug and Anti-Crack systems, so you can operate with complete peace of mind.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                        How does the 'Lifetime' license work?
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        A lifetime license is a single, one-time purchase that grants you permanent access to the product. You will receive all future updates, new features, and dedicated support for the entire lifespan of the software, with no hidden fees or subscriptions.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                        What payment methods do you accept?
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        We accept all major UPI platforms, including PhonePe and Google Pay, for fast and easy transactions. For your security, please contact us directly on WhatsApp or Discord, and we will provide a secure payment link to finalize your order.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PAYMENT & CONTACT SECTION ===== -->
+    <div class="payment-section text-center mt-5">
+      <h2>Ready to Purchase?</h2>
+      <p>Contact us directly for a secure payment link and to finalize your order.</p>
+      <p>UPI ID for reference: <strong>6381867251@fam</strong></p>
+      <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
+        <a href="https://wa.me/+916381867251" target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp me-2"></i><strong>Contact on WhatsApp</strong>
+        </a>
+        <a href="https://discord.com/users/981769019638030366" target="_blank" class="btn btn-discord">
+          <i class="fab fa-discord me-2"></i><strong>Contact on Discord</strong>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 OROCHIMARU Ecosystem | All Rights Reserved</p>
+    <div>
+        <a href="#!">Terms of Service</a>
+        <a href="#!">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- ===== MODAL STRUCTURE ===== -->
+  <div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="priceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPanelTitle"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modalPriceList">
+          <!-- Prices will be injected here by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Link to Your Custom JavaScript File -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
