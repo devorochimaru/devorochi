@@ -1,0 +1,222 @@
+:root {
+  --main-red: #ff1a1a;
+  --hover-red: #ff3333;
+  --dark-bg: #000;
+  --card-bg: #111;
+  --text-light: #e0e0e0;
+  --text-white: #fff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--dark-bg);
+  color: var(--main-red);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+h1, h2, h5 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+header h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 15px var(--main-red), 0 0 30px var(--hover-red);
+  animation: glitch 1.5s ease-in-out;
+}
+
+.intro {
+  background: linear-gradient(145deg, rgba(50,0,0,0.9), rgba(0,0,0,0.8));
+  border: 1px solid var(--main-red);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 0 20px var(--main-red);
+  animation: fadeIn 2s ease;
+  color: var(--text-white);
+}
+
+.intro p {
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.btn-red {
+  border: 2px solid var(--main-red);
+  color: var(--main-red);
+  background: transparent;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.btn-red:hover {
+  background: var(--main-red);
+  color: var(--dark-bg);
+  box-shadow: 0 0 20px var(--main-red), 0 0 40px var(--hover-red);
+  transform: scale(1.05);
+}
+
+/* === NEW ENCHANTED CARD STYLES === */
+.card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255, 26, 26, 0.4); /* Make the default border less bright */
+  box-shadow: 0 0 15px rgba(255, 26, 26, 0.3);
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative; /* Needed for the glow effect */
+  z-index: 10;
+  overflow: hidden; /* Hide the overflow of the glow */
+}
+
+/* This is the magic glow effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 51, 51, 0.25), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  z-index: -1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border-color: rgba(255, 26, 26, 0.8); /* Brighter border on hover */
+  /* A deeper, more complex shadow for a better glow */
+  box-shadow: 0 0 25px var(--hover-red), 0 0 50px var(--main-red), 0 0 10px #fff inset;
+}
+
+.card:hover::before {
+  opacity: 1; /* Make the radial glow appear on hover */
+}
+
+.card h5, .card p {
+  color: var(--text-white);
+}
+
+.card p {
+    color: var(--text-light);
+    line-height: 1.6;
+    flex-grow: 1;
+}
+/* === END OF NEW STYLES === */
+
+/* Professional Modal Styling */
+.modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--main-red);
+  box-shadow: 0 0 30px var(--hover-red);
+  color: var(--text-white);
+}
+.modal-header {
+  border-bottom: 1px solid var(--main-red);
+}
+.modal-body p {
+  color: var(--text-light);
+}
+.btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+/* Professional Accordion (FAQ) Styling */
+.accordion-item {
+  background-color: var(--card-bg);
+  border: 1px solid var(--main-red);
+  margin-bottom: 1rem;
+  border-radius: 8px !important;
+}
+.accordion-header button {
+  background-color: transparent !important;
+  color: var(--text-white) !important;
+  font-family: 'Orbitron', sans-serif;
+}
+.accordion-button:not(.collapsed) {
+  box-shadow: inset 0 -1px 0 var(--main-red);
+}
+.accordion-button::after {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+.accordion-body {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+footer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--main-red);
+  color: #aaa;
+}
+
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--main-red);
+}
+
+/* Animations */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px red; transform: skewX(-5deg); }
+  25% { text-shadow: -2px -2px var(--hover-red); transform: skewX(5deg); }
+  50% { text-shadow: 2px -2px var(--main-red); transform: skewX(-5deg); }
+  75% { text-shadow: -2px 2px var(--hover-red); transform: skewX(5deg); }
+  100% { text-shadow: none; transform: skewX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* === PREMIUM CONTACT BUTTON STYLES === */
+.btn-whatsapp, .btn-discord {
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-family: 'Orbitron', sans-serif; /* Using your brand font */
+}
+
+/* WhatsApp Button */
+.btn-whatsapp {
+  background-color: #25D366; /* Official WhatsApp Green */
+}
+
+.btn-whatsapp:hover {
+  background-color: #1DA851; /* A darker green for hover */
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #25D366;
+}
+
+/* Discord Button */
+.btn-discord {
+  background-color: #5865F2; /* Official Discord Blue */
+}
+
+.btn-discord:hover {
+  background-color: #4552C1; /* A darker blue for hover */
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #5865F2;
+}
+
