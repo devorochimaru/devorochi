@@ -53,7 +53,7 @@ export function About() {
             >
               <div className="relative">
                 <ImageWithFallback
-                  src="https://files.catbox.moe/xhmhj4.jpg"
+                  src="https://freeimage.host/i/whatsapp-image-2025-11-08-at-165619-3ada2192-1-1.KbOdHCv"
                   alt="Orochi Profile"
                   className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-purple-500/30 shadow-2xl"
                 />
